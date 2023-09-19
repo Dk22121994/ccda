@@ -1,0 +1,15 @@
+{
+  "name": "ccda-parser",
+  "version": "1.0.0",
+  "description": "Sample ccda-parser",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@amida-tech/blue-button": "^1.10.9",
+    "@rlyle1179/blue-button": "^1.10.18"
+  }
+}
