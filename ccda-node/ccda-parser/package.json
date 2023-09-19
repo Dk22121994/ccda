@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "@amida-tech/blue-button": "^1.10.9",
-    "@rlyle1179/blue-button": "^1.10.18",
     "json2csv": "^6.0.0-alpha.2"
   }
 }
