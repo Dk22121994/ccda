@@ -1,0 +1,2146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
+  <realmCode code="US"/>
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.1"/>
+  <templateId root="2.16.840.1.113883.10.20.22.1.2"/>
+  <id root="1.3.6.1.4.1.16517" extension="A976582C-940F-11E3-8D0E-1CC4B7D83400"/>
+  <code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="34133-9" displayName="Summarization of Episode Note"/>
+  <effectiveTime value="20230920100964+0530"/>
+  <confidentialityCode displayName="Normal" code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality Code"/>
+  <languageCode code="en-US"/>
+  <versionNumber value="1"/>
+  <recordTarget>
+    <patientRole>
+      <id root="1.3.6.1.4.1.16517.1" extension="107624055"/>
+      <id root="1.3.6.1.4.1.16517.2.2" extension="50068626"/>
+      <addr>
+        <country>US</country>
+        <state>MA</state>
+        <city>BOSTON</city>
+        <postalCode>02109</postalCode>
+        <streetAddressLine>123 MAIN STREET</streetAddressLine>
+      </addr>
+      <telecom value="tel:(508)661-1616" use="HP"/>
+      <patient>
+        <name use="L">
+          <family>BWHCKDRISKTEST</family>
+          <given>ONETEST</given>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" displayName="[object Object]"/>
+        <birthTime value="19440101"/>
+        <ethnicGroupCode displayName="[object Object]" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race and Ethnicity - CDC"/>
+        <raceCode displayName="[object Object]" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race and Ethnicity - CDC"/>
+        <languageCommunication>
+          <languageCode code="[object Object]"/>
+        </languageCommunication>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <documentationOf typeCode="DOC">
+    <serviceEvent classCode="PCPR"/>
+  </documentationOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.6"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.6.1"/>
+          <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Allergies, adverse reactions, alerts</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Substance</th>
+                  <th>Overall Severity</th>
+                  <th>Reaction</th>
+                  <th>Reaction Severity</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td/>
+                  <td/>
+                  <td/>
+                  <td/>
+                  <td/>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.30"/>
+              <id root="1.3.6.1.4.1.16517" extension="1"/>
+              <code code="48765-2" displayName="Allergies, adverse reactions, alerts" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="active"/>
+              <effectiveTime>
+                <low value="20140212"/>
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ" inversionInd="true">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.7"/>
+                  <id nullFlavor="UNK"/>
+                  <code code="ASSERTION" displayName="Assertion" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode"/>
+                  <statusCode code="completed"/>
+                  <effectiveTime nullFlavor="UNK"/>
+                  <value nullFlavor="UNK"/>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.1"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.1.1"/>
+          <code code="10160-0" displayName="History of medication use" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>History of medication use</title>
+          <text>
+            <table border="1" width="100%">
+              <thead>
+                <tr>
+                  <th>Medication Class</th>
+                  <th># fills</th>
+                  <th>Last fill date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td/>
+                  <td/>
+                  <td/>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.16"/>
+              <id nullFlavor="UNK"/>
+              <text>No medication data is applicable</text>
+              <statusCode code="completed"/>
+              <effectiveTime>
+                <low value="20140212"/>
+              </effectiveTime>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.23"/>
+                  <id nullFlavor="UNK"/>
+                  <manufacturedMaterial>
+                    <code code="UNK" displayName="unknown" codeSystemName="Null Flavor">
+                      <originalText>No medication data is applicable<reference value="#medinfo1"/></originalText>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.5"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.5.1"/>
+          <code code="11450-4" displayName="Problem List" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Problem List</title>
+          <text>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">Problems</th>
+                </tr>
+                <tr>
+                  <th>Condition</th>
+                  <th>Severity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.3"/>
+              <id nullFlavor="UNK"/>
+              <code code="CONC" displayName="Concern" codeSystem="2.16.840.1.113883.5.6" codeSystemName="HL7ActClass"/>
+              <statusCode code="completed"/>
+              <effectiveTime>
+                <low value="20140212"/>
+              </effectiveTime>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.4"/>
+                  <id nullFlavor="UNK"/>
+                  <code nullFlavor="UNK"/>
+                  <text>
+                    <reference value="#problem1"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime>
+                    <low value="20140212"/>
+                  </effectiveTime>
+                  <value xsi:type="CD" code="UNK" displayName="unknown" codeSystemName="Null Flavor"/>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.7"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.7.1"/>
+          <code code="47519-4" displayName="History of Procedures" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>History of Procedures</title>
+          <text>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="5">Procedures</th>
+                </tr>
+                <tr>
+                  <th>Service</th>
+                  <th>Procedure code</th>
+                  <th>Service date</th>
+                  <th>Servicing provider</th>
+                  <th>Phone#</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <procedure classCode="PROC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.14"/>
+              <id nullFlavor="UNK"/>
+              <code code="UNK" displayName="unknown" codeSystemName="Null Flavor">
+                <originalText>
+                  <reference value="#procedure1"/>
+                </originalText>
+              </code>
+              <statusCode code="Completed"/>
+              <effectiveTime value="20140212"/>
+            </procedure>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.3"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.3.1"/>
+          <code code="30954-2" displayName="Relevant diagnostic tests and/or laboratory data" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Relevant diagnostic tests and/or laboratory data</title>
+          <text>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="7">Laboratory Results</th>
+                </tr>
+                <tr>
+                  <th>Test</th>
+                  <th>Result</th>
+                  <th>Units</th>
+                  <th>Ref low</th>
+                  <th>Ref high</th>
+                  <th>Date</th>
+                  <th>Source</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>141</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>4.4</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>103</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>22</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>14</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>8.8</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>1.9</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>91</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>10</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>40</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>22</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>3.9</td>
+                  <td>g/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>8.8</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>1.9</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>5.1</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>40</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>1.9</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>3.9</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>287</td>
+                  <td>mgAlb/gCre</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>3.9</td>
+                  <td>g/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>8.8</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>1.9</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>5.1</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>22</td>
+                  <td>mEq/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>40</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>143</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>4.7</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>100</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>32</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>64</td>
+                  <td>U/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>43</td>
+                  <td>U/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>94</td>
+                  <td>U/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>0.5</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>6.8</td>
+                  <td>g/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>4.1</td>
+                  <td>g/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>2.7</td>
+                  <td>g/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>17</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>10.1</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>1.01</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>136</td>
+                  <td>mg/dL</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>11</td>
+                  <td>mmol/L</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="7">No Data Available</td>
+                </tr>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>54</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030719-A97875DA-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2951-2" displayName="Sodium [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030719-A97875DA-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2951-2" displayName="Sodium [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result1"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140211"/>
+                  <value xsi:type="PQ" value="141" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>136-145 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030720-A978D700-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2823-3" displayName="Potassium [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030720-A978D700-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2823-3" displayName="Potassium [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result2"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140211"/>
+                  <value xsi:type="PQ" value="4.4" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>3.4-5.0 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030721-A979220A-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2075-0" displayName="Chloride [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030721-A979220A-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2075-0" displayName="Chloride [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result3"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140211"/>
+                  <value xsi:type="PQ" value="103" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>98-107 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030722-A9796D5A-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2028-9" displayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030722-A9796D5A-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2028-9" displayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result4"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140211"/>
+                  <value xsi:type="PQ" value="22" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>22-31 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030717-A98E9216-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="3094-0" displayName="Urea nitrogen [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030717-A98E9216-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="3094-0" displayName="Urea nitrogen [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result5"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140211"/>
+                  <value xsi:type="PQ" value="14" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>6-23 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030724-A98EE4C8-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="17861-6" displayName="Calcium [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030724-A98EE4C8-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="17861-6" displayName="Calcium [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result6"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140211"/>
+                  <value xsi:type="PQ" value="8.8" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>8.8-10.7 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030718-A99098FE-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2160-0" displayName="Creatinine [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030718-A99098FE-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2160-0" displayName="Creatinine [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result7"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140211"/>
+                  <value xsi:type="PQ" value="1.9" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>0.50-1.20 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030716-A9916702-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="6777-7" displayName="Deprecated Glucose [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030716-A9916702-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="6777-7" displayName="Deprecated Glucose [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result8"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140211"/>
+                  <value xsi:type="PQ" value="91" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>70-100 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030723-A9923DD0-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="10466-1" displayName="Anion gap 3 in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030723-A9923DD0-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="10466-1" displayName="Anion gap 3 in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result9"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140211"/>
+                  <value xsi:type="PQ" value="10" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>5-17 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030725-A9932AE2-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="33914-3" displayName="Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030725-A9932AE2-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="33914-3" displayName="Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result10"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140211"/>
+                  <value xsi:type="PQ" value="40"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030645-A979A9DC-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2028-9" displayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030645-A979A9DC-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2028-9" displayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result11"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="22" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>22-31 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030644-A98DE3A2-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="1751-7" displayName="Albumin [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030644-A98DE3A2-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="1751-7" displayName="Albumin [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result12"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="3.9" unit="g/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>3.5-5.2 g/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030642-A98F1178-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="17861-6" displayName="Calcium [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030642-A98F1178-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="17861-6" displayName="Calcium [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result13"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="8.8" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>8.8-10.7 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030639-A990E6CE-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2160-0" displayName="Creatinine [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030639-A990E6CE-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2160-0" displayName="Creatinine [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result14"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="1.9" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>0.50-1.20 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030643-A991BA36-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2777-1" displayName="Phosphate [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030643-A991BA36-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2777-1" displayName="Phosphate [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result15"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="5.1" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>2.4-4.3 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030640-A99358FA-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="33914-3" displayName="Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030640-A99358FA-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="33914-3" displayName="Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result16"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="40"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030633-A9920A54-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="35674-1" displayName="Creatinine [Mass/volume] in unspecified time Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030633-A9920A54-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="35674-1" displayName="Creatinine [Mass/volume] in unspecified time Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result17"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="1.9" unit="mg/dL"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030635-A9928E7A-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="14957-5" displayName="Microalbumin [Mass/volume] in Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030635-A9928E7A-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="14957-5" displayName="Microalbumin [Mass/volume] in Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result18"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="3.9" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>0.0-2.0 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030634-A992B22E-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="14959-1" displayName="Microalbumin/Creatinine [Mass Ratio] in Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030634-A992B22E-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="14959-1" displayName="Microalbumin/Creatinine [Mass Ratio] in Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result19"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="287" unit="mgAlb/gCre"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>0.0-30 mgAlb/gCre</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030632-A992DCF4-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="13362-9" displayName="Collection duration of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030632-A992DCF4-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="13362-9" displayName="Collection duration of Urine" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result20"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="ST">RANDOM</value>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030630-A98E0FA8-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="1751-7" displayName="Albumin [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030630-A98E0FA8-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="1751-7" displayName="Albumin [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result21"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="3.9" unit="g/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>3.5-5.2 g/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030628-A9904A98-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="17861-6" displayName="Calcium [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030628-A9904A98-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="17861-6" displayName="Calcium [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result22"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="8.8" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>8.8-10.7 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030626-A99113D8-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2160-0" displayName="Creatinine [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030626-A99113D8-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2160-0" displayName="Creatinine [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result23"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="1.9" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>0.50-1.20 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030629-A991E1C8-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2777-1" displayName="Phosphate [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030629-A991E1C8-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2777-1" displayName="Phosphate [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result24"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="5.1" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>2.4-4.3 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030631-A9930224-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="14627-4" displayName="Bicarbonate [Moles/volume] in Venous blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030631-A9930224-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="14627-4" displayName="Bicarbonate [Moles/volume] in Venous blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result25"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="22" unit="mEq/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>25.9-30.0 mEq/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030627-A993891A-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="33914-3" displayName="Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030627-A993891A-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="33914-3" displayName="Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result26"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140210"/>
+                  <value xsi:type="PQ" value="40"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030578-A978B130-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2951-2" displayName="Sodium [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030578-A978B130-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2951-2" displayName="Sodium [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result27"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="143" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>136-145 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030579-A978FC9E-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2823-3" displayName="Potassium [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030579-A978FC9E-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2823-3" displayName="Potassium [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result28"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="4.7" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>3.4-5.0 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030580-A9794762-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2075-0" displayName="Chloride [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030580-A9794762-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2075-0" displayName="Chloride [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result29"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="100" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>98-107 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030581-A987CA9E-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2028-9" displayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030581-A987CA9E-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2028-9" displayName="Carbon dioxide, total [Moles/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result30"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="32" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>22-31 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030583-A9881FD0-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="1742-6" displayName="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030583-A9881FD0-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="1742-6" displayName="Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result31"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="64" unit="U/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>10-50 U/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030584-A9884B90-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="1920-8" displayName="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030584-A9884B90-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="1920-8" displayName="Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result32"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="43" unit="U/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>10-50 U/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030585-A98D5F2C-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="6768-6" displayName="Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030585-A98D5F2C-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="6768-6" displayName="Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result33"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="94" unit="U/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>35-130 U/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030586-A98D8542-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="1975-2" displayName="Bilirubin.total [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030586-A98D8542-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="1975-2" displayName="Bilirubin.total [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result34"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="0.5" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>0.0-1.0 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030587-A98DBEE0-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2885-2" displayName="Protein [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030587-A98DBEE0-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2885-2" displayName="Protein [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result35"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="6.8" unit="g/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>6.4-8.3 g/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030588-A98E3848-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="1751-7" displayName="Albumin [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030588-A98E3848-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="1751-7" displayName="Albumin [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result36"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="4.1" unit="g/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>3.5-5.2 g/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030589-A98E6912-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2336-6" displayName="Globulin [Mass/volume] in Serum" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030589-A98E6912-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2336-6" displayName="Globulin [Mass/volume] in Serum" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result37"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="2.7" unit="g/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>2.0-4.0 g/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030576-A98EBD54-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="3094-0" displayName="Urea nitrogen [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030576-A98EBD54-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="3094-0" displayName="Urea nitrogen [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result38"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="17" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>6-23 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030590-A9906D7A-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="17861-6" displayName="Calcium [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030590-A9906D7A-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="17861-6" displayName="Calcium [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result39"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="10.1" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>8.8-10.7 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030577-A9913C00-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="2160-0" displayName="Creatinine [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030577-A9913C00-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="2160-0" displayName="Creatinine [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result40"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="1.01" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>0.50-1.20 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030575-A9918D36-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="6777-7" displayName="Deprecated Glucose [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030575-A9918D36-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="6777-7" displayName="Deprecated Glucose [Mass/volume] in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result41"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="136" unit="mg/dL"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>70-100 mg/dL</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030582-A992645E-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="10466-1" displayName="Anion gap 3 in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030582-A992645E-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="10466-1" displayName="Anion gap 3 in Serum or Plasma" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result42"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="11" unit="mmol/L"/>
+                  <referenceRange>
+                    <observationRange>
+                      <text>5-17 mmol/L</text>
+                    </observationRange>
+                  </referenceRange>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry typeCode="DRIV">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+              <id root="1.3.6.1.4.1.16517" extension="100025030591-A9948CFC-940F-11E3-90AC-1CC4B7D83400"/>
+              <code code="33914-3" displayName="Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+              <statusCode code="completed"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+                  <id root="1.3.6.1.4.1.16517" extension="100025030591-A9948CFC-940F-11E3-90AC-1CC4B7D83400"/>
+                  <code code="33914-3" displayName="Glomerular filtration rate/1.73 sq M.predicted by Creatinine-based formula (MDRD)" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                  <text>
+                    <reference value="#result43"/>
+                  </text>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140130"/>
+                  <value xsi:type="PQ" value="54"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.22"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.22.1"/>
+          <code code="46240-8" displayName="Encounters" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Encounters</title>
+          <text>
+            <table>
+              <caption>Encounters</caption>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Facility</th>
+                  <th>Date of Service</th>
+                  <th>Diagnosis/Complaint</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <encounter classCode="ENC" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.49"/>
+              <id nullFlavor="UNK"/>
+              <code code="371531000" displayName="encounter report" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                <originalText>
+                  <reference value="#Encounter1"/>
+                </originalText>
+              </code>
+              <effectiveTime value="20140212"/>
+            </encounter>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.2"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.2.1"/>
+          <code code="11369-6" displayName="Immunizations" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Immunizations</title>
+          <entry typeCode="DRIV">
+            <substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <templateId root="2.16.840.1.113883.10.20.22.4.52"/>
+              <id nullFlavor="UNK"/>
+              <text>
+                <reference value="#immunization1"/>
+              </text>
+              <statusCode code="completed"/>
+              <effectiveTime value="20140212"/>
+              <consumable>
+                <manufacturedProduct classCode="MANU">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.54"/>
+                  <id nullFlavor="UNK"/>
+                  <manufacturedMaterial>
+                    <code code="UNK" displayName="unknown" codeSystemName="Null Flavor">
+                      <originalText>
+                        <reference value="#imminfo1"/>
+                      </originalText>
+                    </code>
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.18"/>
+          <code code="48768-6" displayName="Payers" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Payers</title>
+          <text>Not Available</text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.10"/>
+          <code code="18776-5" displayName="Plan of Care" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Plan of Care</title>
+          <text>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="4">Plan of Care</th>
+                </tr>
+                <tr>
+                  <th>Program</th>
+                  <th>Start Date</th>
+                  <th>Severity</th>
+                  <th/>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>No Data Available</td>
+                  <td>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Goals</th>
+                          <th/>
+                        </tr>
+                      </thead>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="RQO">
+              <templateId root="2.16.840.1.113883.10.20.22.4.44"/>
+              <id nullFlavor="UNK"/>
+              <code code="UNK" displayName="unknown" codeSystemName="Null Flavor"/>
+              <statusCode code="new"/>
+              <effectiveTime>
+                <low value="20140212"/>
+              </effectiveTime>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.17"/>
+          <code code="29762-2" displayName="Social History" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Social History</title>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.38"/>
+              <id root="1.3.6.1.4.1.16517" extension="1"/>
+              <code displayName="Smoking Status">
+                <originalText>
+                  <reference value="#social1"/>
+                </originalText>
+              </code>
+              <statusCode code="completed"/>
+              <effectiveTime>
+                <low value="20140212"/>
+              </effectiveTime>
+              <value xsi:type="ST"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <templateId root="2.16.840.1.113883.10.20.22.2.4"/>
+          <templateId root="2.16.840.1.113883.10.20.22.2.4.1"/>
+          <code code="8716-3" displayName="Vital Signs" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+          <title>Vital Signs</title>
+          <entry typeCode="DRIV">
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <templateId root="2.16.840.1.113883.10.20.22.4.26"/>
+              <id nullFlavor="UNK"/>
+              <code code="46680005" displayName="Vital signs" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT"/>
+              <statusCode code="completed"/>
+              <effectiveTime value="20140212"/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <templateId root="2.16.840.1.113883.10.20.22.4.27"/>
+                  <id nullFlavor="UNK"/>
+                  <code displayName="No vital sign data is applicable">
+                    <originalText>
+                      <reference value="#vital1"/>
+                    </originalText>
+                  </code>
+                  <statusCode code="completed"/>
+                  <effectiveTime value="20140212"/>
+                  <value nullFlavor="UNK"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
