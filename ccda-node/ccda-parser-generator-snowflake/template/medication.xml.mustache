@@ -1,0 +1,52 @@
+<component>
+	<section>
+		<templateId root="2.16.840.1.113883.10.20.22.2.1" extension="2014-06-09"/>
+		<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF MEDICATION USE"/>
+		<title>MEDICATIONS</title>
+		<text>
+			<table border="1" width="100%">
+				<thead>
+					<tr>
+						<th>Medication</th>
+						<th>Directions</th>
+						<th>Start Date</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#medicationEntries}}
+					<tr>
+						<td>{{medicationName}}</td>
+						<td>{{medicationInstruction}}</td>
+						<td>{{medicationEffectiveFrom}}</td>
+						<td>{{medicationStatus}}</td>
+					</tr>
+					{{/medicationEntries}}
+				</tbody>
+			</table>
+		</text>
+		{{#medicationEntries}}
+		<entry typeCode="DRIV">
+			<substanceAdministration classCode="SBADM" moodCode="EVN">
+				<!-- ** Medication activity V2 ** -->
+				<templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+				<id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66"/>
+				<statusCode code="active"/>
+				<effectiveTime xsi:type="IVL_TS">
+					<low value="{{medicationEffectiveFrom}}"/>
+				</effectiveTime>
+				<doseQuantity value="{{medicationDosage}}" unit="{{medicationUnits}}"/>
+				<consumable>
+					<manufacturedProduct classCode="MANU">
+						<templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+						<id root="2a620155-9d11-439e-92b3-5d9815ff4ee8"/>
+						<manufacturedMaterial>
+							<code code="573621" displayName="{{medicationName}}" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm"/>
+						</manufacturedMaterial>
+					</manufacturedProduct>
+				</consumable>
+			</substanceAdministration>
+		</entry>
+		{{/medicationEntries}}
+	</section>
+</component>

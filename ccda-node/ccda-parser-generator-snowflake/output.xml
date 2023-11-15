@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<component>
+  <section>
+    <templateId root="2.16.840.1.113883.10.20.22.2.58" extension="2015-08-01"/>
+    <code code="75310-3" displayName="Health Concerns Document" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+    <title>Health Concerns</title>
+    <text>
+      <paragraph ID="Concern1"/>
+    </text>
+    <text>
+      <paragraph ID="Concern2"/>
+    </text>
+    <entry>
+      <act classCode="ACT" moodCode="EVN">
+        <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01"/>
+        <id nullFlavor="UNK"/>
+        <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health Concern"/>
+        <text>
+          <reference value="#Concern1"/>
+        </text>
+        <statusCode code="active"/>
+      </act>
+    </entry>
+    <entry>
+      <act classCode="ACT" moodCode="EVN">
+        <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01"/>
+        <id nullFlavor="UNK"/>
+        <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health Concern"/>
+        <text>
+          <reference value="#Concern2"/>
+        </text>
+        <statusCode code="active"/>
+      </act>
+    </entry>
+  </section>
+</component>

@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="CDA.xsl"?>
+<!--
+ Title:        Progress Note
+ Filename:     C-CDA_R2_Progress_Note.xml
+ Created by:   Lantana Consulting Group, LLC
+ 
+ $LastChangedDate: 2014-11-12 23:25:09 -0500 (Wed, 12 Nov 2014) $
+  
+ ********************************************************
+ Disclaimer: This sample file contains representative data elements to represent a Progress Note. 
+ The file depicts a fictional character's health data. Any resemblance to a real person is coincidental. 
+ To illustrate as many data elements as possible, the clinical scenario may not be plausible. 
+ The data in this sample file is not intended to represent real patients, people or clinical events. 
+ This sample is designed to be used in conjunction with the C-CDA Clinical Notes Implementation Guide.
+ ********************************************************
+ -->
+<ClinicalDocument
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:hl7-org:v3"
+	xmlns:mif="urn:hl7-org:v3/mif">
+	<!-- ** CDA Header ** -->
+	<realmCode code="US"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- US General Header Template -->
+	<templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2014-06-09"/>
+	<!-- Progress Note (V2) Template  -->
+	<templateId root="2.16.840.1.113883.10.20.22.1.9" extension="2014-06-09"/>
+	<id extension="999022" root="2.16.840.1.113883.19"/>
+	<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="11506-3" displayName="Progress note"/>
+	<title>Progress Note</title>
+	<effectiveTime value="20050329171504-0500"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" displayName="normal" />
+	<languageCode code="en-US"/>
+	<setId extension="111199021" root="2.16.840.1.113883.19"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<!-- Fake ID using HL7 example OID. -->
+			<id extension="12345" root="2.16.840.1.113883.19"/>
+			<!-- Fake Social Security Number using the actual SSN OID. -->
+			<id extension="111-00-1234" root="2.16.840.1.113883.4.1"/>
+			<!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
+			<addr use="HP">
+				<streetAddressLine>17 Daws Rd.</streetAddressLine>
+				<city>Blue Bell</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<!-- US is "United States" from ISO 3166-1 Country Codes: 1.0.3166.1 -->
+				<country>US</country>
+			</addr>
+			<telecom value="tel:(781)555-1212" use="HP"/>
+			<!-- HP is "primary home" from HL7 AddressUse 2.16.840.1.113883.5.1119 -->
+			<patient>
+				<name use="L">
+					<!-- L is "Legal" from HL7 EntityNameUse 2.16.840.1.113883.5.45 -->
+					<prefix>Mr.</prefix>
+					<given>Adam</given>
+					<given qualifier="CL">Frankie</given>
+					<!-- CL is "Call me" from HL7 EntityNamePartQualifier 2.16.840.1.113883.5.43 -->
+					<family>Everyman</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male"/>
+				<birthTime value="19541125"/>
+				<maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatusCode"/>
+				<religiousAffiliationCode code="1013" displayName="Christian (non-Catholic, non-specific)" codeSystemName=".HL7 Religious Affiliation " codeSystem="2.16.840.1.113883.1.11.19185"/>
+				<raceCode code="2106-3" displayName="White" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
+				<ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
+				<guardian>
+					<code code="GRFTH" displayName="grandfather" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 Role code"/>
+					<addr use="HP">
+						<!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
+						<streetAddressLine>17 Daws Rd.</streetAddressLine>
+						<city>Blue Bell</city>
+						<state>MA</state>
+						<postalCode>02368</postalCode>
+						<country>US</country>
+						<!-- US is "United States" from ISO 3166-1 Country Codes: 1.0.3166.1 -->
+					</addr>
+					<telecom value="tel:(781)555-1212" use="HP"/>
+					<guardianPerson>
+						<name>
+							<given>Ralph</given>
+							<family>Relative</family>
+						</name>
+					</guardianPerson>
+				</guardian>
+				<birthplace>
+					<place>
+						<addr>
+							<state>MA</state>
+							<postalCode>02368</postalCode>
+							<country>USA</country>
+						</addr>
+					</place>
+				</birthplace>
+				<languageCommunication>
+					<languageCode code="fr-CN"/>
+					<modeCode code="RWR" displayName="Received written" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
+					<preferenceInd value="true"/>
+				</languageCommunication>
+			</patient>
+			<providerOrganization>
+				<!-- Organizations SHOULD have an NPI; this is a real root; fake extension -->
+				<id root="2.16.840.1.113883.4.6" extension="111122223333"/>
+				<name>Good Health Clinic</name>
+				<telecom use="WP" value="tel:(781)555-1212"/>
+				<addr>
+					<streetAddressLine>21 North Ave</streetAddressLine>
+					<city>Burlington</city>
+					<state>MA</state>
+					<postalCode>02368</postalCode>
+					<country>USA</country>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<time value="20050329224411-0500"/>
+		<assignedAuthor>
+			<id extension="KP00017" root="2.16.840.1.113883.19.5"/>
+			<addr>
+				<streetAddressLine>21 North Ave.</streetAddressLine>
+				<city>Burlington</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom use="WP" value="tel:(555)555-1003"/>
+			<assignedPerson>
+				<name>
+					<given>Henry</given>
+					<family>Seven</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<assignedEntity>
+			<id root="2.16.840.1.113883.19.5" extension="43252"/>
+			<addr>
+				<streetAddressLine>21 North Ave.</streetAddressLine>
+				<city>Burlington</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom use="WP" value="tel:(555)555-1003"/>
+			<assignedPerson>
+				<name>
+					<given>Henry</given>
+					<family>Seven</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<informant>
+		<assignedEntity>
+			<id extension="KP00017" root="2.16.840.1.113883.19.5"/>
+			<addr>
+				<streetAddressLine>21 North Ave.</streetAddressLine>
+				<city>Burlington</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom value="tel:(555)555-1003"/>
+			<assignedPerson>
+				<name>
+					<given>Henry</given>
+					<family>Seven</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</informant>
+	<informant>
+		<relatedEntity classCode="PRS">
+			<!-- classCode PRS represents a person with personal relationship with the patient. -->
+			<code code="SPS" displayName="SPOUSE" codeSystem="2.16.840.1.113883.1.11.19563" codeSystemName="Personal Relationship Role Type Value Set"/>
+			<relatedPerson>
+				<name>
+					<given>Rose</given>
+					<family>Everyman</family>
+				</name>
+			</relatedPerson>
+		</relatedEntity>
+	</informant>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id root="2.16.840.1.113883.19.5"/>
+				<name>Good Health Clinic</name>
+				<telecom value="tel:(555)555-1212" use="WP"/>
+				<addr use="WP">
+					<streetAddressLine>17 Daws Rd.</streetAddressLine>
+					<city>Blue Bell</city>
+					<state>MA</state>
+					<postalCode>02368</postalCode>
+					<country>USA</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient>
+		<intendedRecipient>
+			<informationRecipient>
+				<name>
+					<given>Henry</given>
+					<family>Seven</family>
+				</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<name>Good Health Clinic</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="20050329224411-0500"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="KP00017" root="2.16.840.1.113883.19"/>
+			<addr>
+				<streetAddressLine>21 North Ave.</streetAddressLine>
+				<city>Burlington</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom use="WP" value="tel:(555)555-1003"/>
+			<assignedPerson>
+				<name>
+					<given>Henry</given>
+					<family>Seven</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authenticator>
+		<time value="20050329224411-0500"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="KP00017" root="2.16.840.1.113883.4.6"/>
+			<addr>
+				<streetAddressLine>21 North Ave.</streetAddressLine>
+				<city>Burlington</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom use="WP" value="tel:(555)555-1003"/>
+			<assignedPerson>
+				<name>
+					<given>Henry</given>
+					<family>Seven</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</authenticator>
+	<participant typeCode="IND">
+		<associatedEntity classCode="NOK">
+			<code code="MTH" codeSystem="2.16.840.1.113883.5.111" displayName="mother" />
+			<addr>
+				<streetAddressLine>17 Daws Rd.</streetAddressLine>
+				<city>Blue Bell</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom value="tel:(999)555-1212" use="WP"/>
+			<associatedPerson>
+				<name>
+					<prefix>Mrs.</prefix>
+					<given>Abigail</given>
+					<family>Ruth</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<inFulfillmentOf typeCode="FLFS">
+		<order classCode="ACT" moodCode="RQO">
+			<id root="2.16.840.1.113883.19" extension="12345-67890"/>
+		</order>
+	</inFulfillmentOf>
+	<documentationOf typeCode="DOC">
+		<serviceEvent classCode="PCPR">
+			<templateId root="2.16.840.1.113883.10.20.21.3.1"/>
+			<effectiveTime>
+				<low value="20100601"/>
+				<high value="20100915"/>
+			</effectiveTime>
+			<performer typeCode="PRF">
+				<functionCode code="PCP" codeSystem="2.16.840.1.113883.5.88" codeSystemName="ParticipationFunction" displayName="primary care physician">
+					<originalText>Primary Care Provider</originalText>
+				</functionCode>
+				<time>
+					<low value="20020716"/>
+					<high value="20070915"/>
+				</time>
+				<assignedEntity>
+					<id extension="PseudoMD-1" root="2.16.840.1.113883.19"/>
+					<code code="200000000X" displayName="Allopathic and Osteopathic Physicians" codeSystemName="Provider Codes" codeSystem="2.16.840.1.113883.6.101"/>
+					<addr/>
+					<telecom value="tel:+1-301-975-3251" use="HP"/>
+					<assignedPerson>
+						<name>
+							<prefix>Dr.</prefix>
+							<given>Pseudo</given>
+							<family>Physician-1</family>
+						</name>
+					</assignedPerson>
+					<representedOrganization>
+						<id root="2.16.840.1.113883.3.72.5"/>
+						<name>NIST HL7 Test Laboratory</name>
+						<telecom/>
+						<addr/>
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+			<performer typeCode="PRF">
+				<functionCode code="PP" displayName="Primary Care Provider" codeSystem="2.16.840.1.113883.12.443" codeSystemName="Provider Role">
+					<originalText>Primary Care Provider</originalText>
+				</functionCode>
+				<time>
+					<low value="20020716"/>
+					<high value="20070915"/>
+				</time>
+				<assignedEntity>
+					<id extension="PseudoMD-3" root="2.16.840.1.113883.19"/>
+					<code code="200000000X" displayName="Allopathic and Osteopathic Physicians" codeSystemName="Provider Codes" codeSystem="2.16.840.1.113883.6.101"/>
+					<addr/>
+					<telecom value="tel:+1-301-975-3251" use="HP"/>
+					<assignedPerson>
+						<name>
+							<prefix>Dr.</prefix>
+							<given>Pseudo</given>
+							<family>Physician-3</family>
+						</name>
+					</assignedPerson>
+					<representedOrganization>
+						<id root="2.16.840.1.113883.19.123"/>
+						<name>HL7 Test Laboratory</name>
+						<telecom/>
+						<addr/>
+					</representedOrganization>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<componentOf>
+		<encompassingEncounter>
+			<id extension="9937012" root="2.16.840.1.113883.19"/>
+			<code codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT-4" code="99213" displayName="Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter."/>
+			<effectiveTime>
+				<low value="20050329"/>
+				<high value="20050329"/>
+			</effectiveTime>
+			<location>
+				<healthCareFacility>
+					<id root="2.16.540.1.113883.19.2"/>
+				</healthCareFacility>
+			</location>
+		</encompassingEncounter>
+	</componentOf>
+	<!--
+
+***********************************
+
+***********************************
+
+-->
+	<!-- ********************************************************
+
+     CDA Body
+
+     ******************************************************** -->
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<!-- Health Concerns Section -->
+					<templateId root="2.16.840.1.113883.10.20.22.2.58" extension="2015-08-01"/>
+					<code code="75310-3" displayName="Health Concerns Document" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<title>Health Concerns</title>
+					<text>
+						<paragraph ID="Concern">On March 1, 2014, the patient expressed concern about spreading their Community Acquired Pneumonia.</paragraph>
+					</text>
+					<entry>
+						<!-- Health Concern Act -->
+						<act classCode="ACT" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01"/>
+							<id nullFlavor="UNK"/>
+							<!-- Fixed act/code in C-CDA -->
+							<code code="75310-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health Concern"/>
+							<text>
+								<reference value="#Concern" />
+							</text>
+							<statusCode code="active"/>
+						</act>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09"/>
+					<!-- Medication Section (entries required) -->
+					<code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of Medication Use"/>
+					<title>MEDICATIONS</title>
+					<text>
+						<table border="1" width="100%">
+							<thead>
+								<tr>
+									<th>Medication</th>
+									<th>Instructions</th>
+									<th>Dosage</th>
+									<th>Effective Dates (start - stop)</th>
+									<th>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ID="Medication_6">
+									<td>
+										<content ID="MedicationName_6">3 ML Insulin Glargine 100 UNT/ML Pen Injector [Lantus]</content>
+									</td>
+									<td>
+										<content ID="MedicationSig_6">Administer 40 units at bedtime</content>
+									</td>
+									<td>
+										<content>40 units</content>
+									</td>
+									<td>Jan-09-2009 - </td>
+									<td>Active</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09"/>
+							<id root="1310a2d3-f888-4722-b4c4-a3c5911ac7f9"/>
+							<text>
+								<!-- This reference refers to medication information in unstructured portion of section-->
+								<reference value="#Medication_6"/>
+							</text>
+							<statusCode code="active"/>
+							<!-- This first effectiveTime shows that medication was added on January 9, 2009 (not known to have stopped)-->
+							<effectiveTime xsi:type="IVL_TS">
+								<low value="20090109"/>
+								<high nullFlavor="NI"/>
+							</effectiveTime>
+							<!-- The second effectiveTime specifies dose frequency, which can be either a period (PIVL_TS) or event (EIVL_TS). -->
+							<!-- This long-lasting insulin is administered once per day before bedtime (code = "HS", hour of sleep), which is an event-->
+							<effectiveTime xsi:type="EIVL_TS" operator="A">
+								<event code="HS"/>
+							</effectiveTime>
+							<!-- This route uses the NCI (National Cancer Institute) Thesauraus code system, which is constrained to the value set of 2.16.840.1.113883.3.88.12.3221.8.7 (FDA Medication Route) -->
+							<routeCode code="C38299" codeSystem="2.16.840.1.113883.3.26.1.1" displayName="Subcutaneous Route of Administration" codeSystemName="NCI Thesaurus"/>
+							<!-- Since this dose is not pre-coordinated, specify both the amount with units in UCUM. [IU] is international units -->
+							<!-- Note that this basal insulin is not administered on a sliding scale and a specific dose is administered-->
+							<doseQuantity value="40" unit="[IU]"/>
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<!-- ** Medication information ** -->
+									<templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09"/>
+									<manufacturedMaterial>
+										<!-- Medications should be specified at a level corresponding to prescription when possible (branded medication below)-->
+										<!-- Note the medication code specified in the test data is 261551, but that is not used since it's not an administered product (just brand name)-->
+										<code code="847232" codeSystem="2.16.840.1.113883.6.88" displayName="3 ML insulin glargine 100 UNT/ML Pen Injector [Lantus]" codeSystemName="RxNorm">
+											<originalText>
+												<reference value="#MedicationName_6"/>
+											</originalText>
+										</code>
+									</manufacturedMaterial>
+									<manufacturerOrganization>
+										<name>SANOFI-AVENTIS</name>
+									</manufacturerOrganization>
+								</manufacturedProduct>
+							</consumable>
+							<entryRelationship typeCode="COMP">
+								<substanceAdministration classCode="SBADM" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.22.4.147"/>
+									<code code="76662-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medication Instructions"/>
+									<text>
+										<!-- Reference into the section.text to a tag that ONLY contains free text SIG -->
+										<reference value="#MedicationSig_6"/>
+									</text>
+									<consumable>
+										<manufacturedProduct>
+											<manufacturedLabeledDrug nullFlavor="NA"/>
+										</manufacturedProduct>
+									</consumable>
+								</substanceAdministration>
+							</entryRelationship>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+			<component>
+				<!-- This is an example of how to include quality measure information (i.e. reported outcome) on an individual patient's C-CDA document -->
+				<!-- This uses templates from the QRDA1, which is not part of C-CDA, but is CDA conformant and a US national standard for reporting quality measures -->
+				<!-- This uses the "Measure Section" section where the measure logic (i.e. denominators, numerators) is imparted using negationInd of measure component observations -->
+				<!-- This example complies with QRDA1 measure section but may not suitable for formal quality reporting. Refer to QRDA1 and QRDA3 implementation guidance for more details -->
+				<!-- Per discussion with clinical quality improvement CQI workgroup, this aligns with how the Joint Commission encourage patient level reporting in QRDA1 documents.-->
+				<!-- For the measures shown in this section, the clinical data that support quality calculation could be included in other sections (e.g. problems, procedures, results, vital signs, etc.) -->
+				<!-- Thank you to Yan Heras and Gay Dolin + other members in CQI workgroup for consultation and feedback regarding the sample -->
+				<section>
+					<!-- Templates use QRDA1 1.1 (current reporting standard as of 2018)-->
+					<!-- This is the templateId for Measure Section -->
+					<templateId root="2.16.840.1.113883.10.20.24.2.2"/>
+					<!-- This is the templateId for Measure Section QDM -->
+					<templateId root="2.16.840.1.113883.10.20.24.2.3"/>
+					<code code="55186-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+        displayName="Measure Document"/>
+					<title>Measure Section</title>
+					<text>
+						<table border="1" width="100%">
+							<colgroup>
+								<col width="25%"/>
+								<col width="15%"/>
+								<col width="15%"/>
+								<col width="15%"/>
+								<col width="15%"/>
+								<col width="15%"/>
+							</colgroup>
+							<thead>
+								<tr>
+									<!-- Note that this table is an illustrative format that could be used to show human readable measure, but others are possible -->
+									<!-- Each of the fields in this table will be represented in machine readable as well as human readable -->
+									<!-- For each of the measures we provide a descriptive name and an identifier -->
+									<!-- The machine-readable entries will have the unique GUID reference to this measure, if available -->
+									<!-- An alternative option would be to include additional description of measure logic or a link in the human-readable -->
+									<!-- This aligns with what may be typically included from QRDA1 document -->
+									<th>Measure</th>
+									<th>Compliance Period</th>
+									<th>Denominator</th>
+									<th>Numerator</th>
+									<th>Exclusion</th>
+									<th>Outcome</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Diabetes Hemoglobin A1c Poor Control (CMS 122v5)</td>
+									<td>Jan 1 2017 - Dec 31 2017</td>
+									<td>yes</td>
+									<td>no</td>
+									<td>no</td>
+									<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
+									<!-- Since lower = better for CMS 122v5, a false numerator means complaince-->
+									<td>Compliant</td>
+								</tr>
+								<tr>
+									<td>Colorectal Cancer Screening (CMS 130v5)</td>
+									<td>Jan 1 2017 - Dec 31 2017</td>
+									<td>yes</td>
+									<td>no</td>
+									<td>no</td>
+									<!-- Compliance here is based on  the measure "Improvement Notation" from the Measure Definition-->
+									<!-- Since higher = better for CMS 130v5, a false numerator means non-complaince-->
+									<td>Non-Compliant</td>
+								</tr>
+								<tr>
+									<td>Pneumococcal Vaccination Status for Older Adults (CMS 127v5)</td>
+									<td>Jan 1 2017 - Dec 31 2017</td>
+									<td>no</td>
+									<td>no</td>
+									<td>no</td>
+									<!-- Since this patient was not in initial population of measure, we show as not eligible-->
+									<td>Not Eligible</td>
+								</tr>
+								<tr>
+									<td>Controlling High Blood Pressure (CMS 165v5)</td>
+									<td>Jan 1 2017 - Dec 31 2017</td>
+									<td>yes</td>
+									<td>excl</td>
+									<td>yes</td>
+									<!-- Patient excluded due to a condition (e.g. Stage 5 CKD) -->
+									<td>Excluded</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<!-- In a pilot with 8 different sites, the real-value was in providing human readable content in a timely manner -->
+					<!-- This proposed entry aligns with QRDA standards but is unlikely to be imported in near-term -->
+					<entry>
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
+							<templateId root="2.16.840.1.113883.10.20.24.3.97"/>
+							<id root="d7345481-b3b5-41e0-a8ae-03dabcd4a0cc"/>
+							<!-- A code element could be added to make organizer type more specific, although was not in the original QRDA1 template -->
+							<statusCode code="completed"/>
+							<!-- This reference contains the version specific identifier of the measure-->
+							<reference typeCode="REFR">
+								<externalDocument classCode="DOC" moodCode="EVN">
+									<!-- This includes an uuid identifier of the measure logic, For this example, -->
+									<!-- see https://ecqi.healthit.gov/system/files/ecqm/measures/CMS122v5_SimpleXML_2.xml -->
+									<!-- If no GUID available, the measure would at least be described using the text field -->
+									<id root="2.16.840.1.113883.4.738"
+                        extension="40280381-51f0-825b-0152-229afff616ee"/>
+									<code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                        displayName="Health Quality Measure Document"/>
+									<text>Diabetes: Hemoglobin A1c Poor Control</text>
+									<versionNumber value="5"/>
+								</externalDocument>
+							</reference>
+							<!-- To specify the time period, a component has been added with the appropriate QRDA1 template (Reporting Parameters Act) -->
+							<component>
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.17.3.8"/>
+									<id root="55a43e20-6463-46eb-81c3-9a3a1ad41225"/>
+									<code code="252116004" codeSystem="2.16.840.1.113883.6.96"
+                        displayName="Observation Parameters"/>
+									<effectiveTime>
+										<!-- The beginning of the reporting period. -->
+										<low value="20170101000000-0500"/>
+										<!-- The ending of the reporting period. -->
+										<high value="20171231235959-0500"/>
+									</effectiveTime>
+								</act>
+							</component>
+							<component>
+								<!-- Set negationInd="false" to assert that the criteria are met by the included data. 
+				Set negationInd="true" to assert that the criteria are NOT met by the included data. 
+				Since this patient is in the denominator, negationInd is set to false -->
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ActCode" displayName="Assertion"/>
+									<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ObservationValue" displayName="denominator"/>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<!-- This includes an version specific uuid identifier of the specific measure component, (denominator in this example) -->
+											<!-- For example, see https://ecqi.healthit.gov/system/files/2017_CMS_QRDA_III_Eligible_Clinicians_and_EP_IG_final_0703_508.pdf -->
+											<id root="D346DA74-F16E-4159-BEDF-331BA28837FB"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+							<component>
+								<!-- Since this patient is NOT in the numerator, negationInd is set to true -->
+								<!-- Note that this measure has inverted numerator logic (i.e. numerator events are non-compliant)-->
+								<observation classCode="OBS" moodCode="EVN" negationInd="true">
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ActCode" displayName="Assertion"/>
+									<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ObservationValue" displayName="numerator"/>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<id root="6D01A564-58CC-4CF5-929F-B83583701BFE"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+							<!-- no denominator exclusion criteria available for this measure so omitted -->
+						</organizer>
+					</entry>
+					<entry>
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
+							<templateId root="2.16.840.1.113883.10.20.24.3.97"/>
+							<id root="32f4ad75-9e16-43f8-83f3-a1d906a147ab"/>
+							<statusCode code="completed"/>
+							<reference typeCode="REFR">
+								<externalDocument classCode="DOC" moodCode="EVN">
+									<id root="2.16.840.1.113883.4.738"
+                        extension="40280381-51f0-825b-0152-22a1e7e81737"/>
+									<code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                        displayName="Health Quality Measure Document"/>
+									<text>Colorectal Cancer Screening</text>
+									<versionNumber value="5"/>
+								</externalDocument>
+							</reference>
+							<!-- To specify the time period, a component has been added with the appropriate QRDA1 template (Reporting Parameters Act) -->
+							<component>
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.17.3.8"/>
+									<id root="55a43e20-6463-46eb-81c3-9a3a1ad41225"/>
+									<code code="252116004" codeSystem="2.16.840.1.113883.6.96"
+                        displayName="Observation Parameters"/>
+									<effectiveTime>
+										<!-- The beginning of the reporting period. -->
+										<low value="20170101000000-0500"/>
+										<!-- The ending of the reporting period. -->
+										<high value="20171231235959-0500"/>
+									</effectiveTime>
+								</act>
+							</component>
+							<component>
+								<!-- Since this patient is in the denominator, negationInd is set to false -->
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ActCode" displayName="Assertion"/>
+									<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ObservationValue" displayName="denominator"/>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<id root="589C2FD6-6AA9-4AF8-9E1C-973170361917"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+							<component>
+								<!-- Since this patient is NOT in the numerator, negationInd is set to true -->
+								<!-- Note that this measure has typical numerator logic (i.e. numerator events are compliant)-->
+								<observation classCode="OBS" moodCode="EVN" negationInd="true">
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ActCode" displayName="Assertion"/>
+									<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ObservationValue" displayName="numerator"/>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<id root="52ADE511-39D4-4CBC-84B6-A82059741359"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+							<component>
+								<!-- Since this patient is NOT excluded, negationInd is set to true -->
+								<observation classCode="OBS" moodCode="EVN" negationInd="true">
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ActCode" displayName="Assertion"/>
+									<value xsi:type="CD" code="DENEX" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ObservationValue" displayName="denominator exclusions"/>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<id root="93AA9C96-E1FE-435B-BA0B-FAF0C5592275"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<entry>
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
+							<templateId root="2.16.840.1.113883.10.20.24.3.97"/>
+							<id root="f243a0e3-0590-4e86-85b7-2b49e86eb7c5"/>
+							<statusCode code="completed"/>
+							<reference typeCode="REFR">
+								<externalDocument classCode="DOC" moodCode="EVN">
+									<id root="2.16.840.1.113883.4.738"
+                        extension="40280381-52fc-3a32-0153-1a646a2a0bfa"/>
+									<code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                        displayName="Health Quality Measure Document"/>
+									<text>Pneumonia Vaccination Status for Older Adults</text>
+									<versionNumber value="5"/>
+								</externalDocument>
+							</reference>
+							<!-- To specify the time period, a component has been added with the appropriate QRDA1 template (Reporting Parameters Act) -->
+							<component>
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.17.3.8"/>
+									<id root="55a43e20-6463-46eb-81c3-9a3a1ad41225"/>
+									<code code="252116004" codeSystem="2.16.840.1.113883.6.96"
+                        displayName="Observation Parameters"/>
+									<effectiveTime>
+										<!-- The beginning of the reporting period. -->
+										<low value="20170101000000-0500"/>
+										<!-- The ending of the reporting period. -->
+										<high value="20171231235959-0500"/>
+									</effectiveTime>
+								</act>
+							</component>
+							<component>
+								<!-- Since this patient is NOT in the denominator, negationInd is set to true -->
+								<observation classCode="OBS" moodCode="EVN" negationInd="true">
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ActCode" displayName="Assertion"/>
+									<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ObservationValue" displayName="denominator"/>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<id root="B57EA797-15A1-4C60-B34C-BAE292FE3B76"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+							<component>
+								<!-- Since this patient is NOT in the numerator, negationInd is set to true -->
+								<observation classCode="OBS" moodCode="EVN" negationInd="true">
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ActCode" displayName="Assertion"/>
+									<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ObservationValue" displayName="numerator"/>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<id root="CBD0926D-6088-44EE-883C-0A0F9E77E2A1"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+							<!-- no denominator exclusion criteria available for this measure so omitted -->
+						</organizer>
+					</entry>
+					<entry>
+						<organizer classCode="CLUSTER" moodCode="EVN">
+							<templateId root="2.16.840.1.113883.10.20.24.3.98"/>
+							<templateId root="2.16.840.1.113883.10.20.24.3.97"/>
+							<id root="ee940592-38b1-44fe-a74b-83e1a479d651"/>
+							<statusCode code="completed"/>
+							<reference typeCode="REFR">
+								<externalDocument classCode="DOC" moodCode="EVN">
+									<id root="2.16.840.1.113883.4.738"
+                        extension="40280381-51f0-825b-0152-22b98cff181a"/>
+									<code code="57024-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+                        displayName="Health Quality Measure Document"/>
+									<text>Controlling High Blood Pressure</text>
+									<versionNumber value="5"/>
+								</externalDocument>
+							</reference>
+							<!-- To specify the time period, a component has been added with the appropriate QRDA1 template (Reporting Parameters Act) -->
+							<component>
+								<act classCode="ACT" moodCode="EVN">
+									<templateId root="2.16.840.1.113883.10.20.17.3.8"/>
+									<id root="55a43e20-6463-46eb-81c3-9a3a1ad41225"/>
+									<code code="252116004" codeSystem="2.16.840.1.113883.6.96"
+                        displayName="Observation Parameters"/>
+									<effectiveTime>
+										<!-- The beginning of the reporting period. -->
+										<low value="20170101000000-0500"/>
+										<!-- The ending of the reporting period. -->
+										<high value="20171231235959-0500"/>
+									</effectiveTime>
+								</act>
+							</component>
+							<component>
+								<!-- Since this patient is in the denominator, negationInd is set to false -->
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ActCode" displayName="Assertion"/>
+									<value xsi:type="CD" code="DENOM" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ObservationValue" displayName="denominator"/>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<id root="E62FEBA3-0F98-460D-93CD-44314D7203A8"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+							<component>
+								<!-- Since this patient is excluded, they are NOT in numerator, negationInd is set to true-->
+								<observation classCode="OBS" moodCode="EVN" negationInd="true">
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ActCode" displayName="Assertion"/>
+									<value xsi:type="CD" code="NUMER" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ObservationValue" displayName="numerator"/>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<id root="F9FEBF42-4B21-47A9-B03E-D2DA5CF8492B"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+							<component>
+								<!-- Since this patient is  excluded, negationInd is set to false -->
+								<observation classCode="OBS" moodCode="EVN" negationInd="false">
+									<code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ActCode" displayName="Assertion"/>
+									<value xsi:type="CD" code="DENEX" codeSystem="2.16.840.1.113883.5.4"
+                        codeSystemName="ObservationValue" displayName="denominator exclusions"/>
+									<reference typeCode="REFR">
+										<externalObservation classCode="OBS" moodCode="EVN">
+											<id root="55A6D5F3-2029-4896-B850-4C7894161D7D"/>
+										</externalObservation>
+									</reference>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

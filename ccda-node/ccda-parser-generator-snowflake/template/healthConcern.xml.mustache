@@ -1,0 +1,28 @@
+<component>
+  <section>
+    <!-- Health Concerns Section -->
+    <templateId root="2.16.840.1.113883.10.20.22.2.58" extension="2015-08-01"/>
+    <code code="75310-3" displayName="Health Concerns Document" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+    <title>Health Concerns</title>
+      <text>
+	  {{#healthConcernEntries}}
+        <paragraph ID="{{id}}">{{value}}</paragraph>
+	  {{/healthConcernEntries}}
+      </text>
+	  {{#healthConcernEntries}}
+      <entry>
+        <!-- Health Concern Act -->
+        <act classCode="ACT" moodCode="EVN">
+          <templateId root="2.16.840.1.113883.10.20.22.4.132" extension="2015-08-01"/>
+          <id nullFlavor="UNK"/>
+          <!-- Fixed act/code in C-CDA -->
+          <code code="75310-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health Concern"/>
+          <text>
+            <reference value="#{{id}}" />
+          </text>
+          <statusCode code="active"/>
+        </act>
+      </entry>
+    {{/healthConcernEntries}}
+  </section>
+</component>

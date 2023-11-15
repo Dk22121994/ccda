@@ -1,0 +1,186 @@
+<data>
+	<!-- ** CDA Header ** -->
+	<realmCode code="US"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- US General Header Template -->
+	<templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2014-06-09"/>
+	<!-- Progress Note (V2) Template  -->
+	<templateId root="2.16.840.1.113883.10.20.22.1.9" extension="2014-06-09"/>
+	<id extension="999022" root="2.16.840.1.113883.19"/>
+	<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="11506-3" displayName="Subsequent evaluation note"/>
+	<title>Progress Note</title>
+	<effectiveTime value="20050329171504-0500"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="en-US"/>
+	<setId extension="111199021" root="2.16.840.1.113883.19"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<!-- Fake ID using HL7 example OID. -->
+			<id extension="{{patientID}}" root="2.16.840.1.113883.19"/>
+			<!-- Fake Social Security Number using the actual SSN OID. -->
+			<id extension="{{patientSocialSecurity}}" root="2.16.840.1.113883.4.1"/>
+			<!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
+			<addr use="HP">
+				<streetAddressLine>{{patientPrimaryHomeStreet}}</streetAddressLine>
+				<city>{{patientPrimaryHomeCity}}</city>
+				<state>{{patientPrimaryHomeState}}</state>
+				<postalCode>{{patientPrimaryPostalCd}}</postalCode>
+				<country>{{patientPrimaryCountry}}</country>
+			</addr>
+			<telecom value="tel:{{patientPrimaryPhone}}" use="HP"/>
+			<!-- HP is "primary home" from HL7 AddressUse 2.16.840.1.113883.5.1119 -->
+			<patient>
+				<name use="L">
+					<!-- L is "Legal" from HL7 EntityNameUse 2.16.840.1.113883.5.45 -->
+					<prefix>{{patientLegalPrefix}}</prefix>
+					<given>{{patientLegalGivenName}}</given>
+					<given qualifier="CL">{{patientLegalCallMeName}}</given>
+					<!-- CL is "Call me" from HL7 EntityNamePartQualifier 2.16.840.1.113883.5.43 -->
+					<family>{{patientLegalFamilyName}}</family>
+				</name>
+				<administrativeGenderCode code="{{patientGenderCode}}" codeSystem="2.16.840.1.113883.5.1" displayName="{{patientGender}}"/>
+				<birthTime value="{{patientDOB}}"/>
+				<maritalStatusCode code="{{patientMaritalStatusCode}}" displayName="{{patientMaritalStatus}}" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatusCode"/>
+				<religiousAffiliationCode code="{{patientReligionCode}}" displayName="{{patientReligion}}" codeSystemName=".HL7 Religious Affiliation " codeSystem="2.16.840.1.113883.1.11.19185"/>
+				<raceCode code="{{patientRaceCode}}" displayName="{{patientRace}}" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
+				<ethnicGroupCode code="{{patientEthinicCode}}" displayName="{{patientEthinic}}" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race &amp; Ethnicity - CDC"/>
+				<guardian>
+					<code code="{{gurdianRelationShipCode}}" displayName="{{gurdianRelationShip}}" codeSystem="2.16.840.1.113883.5.111" codeSystemName="HL7 Role code"/>
+					<addr use="HP">
+						<!-- HP is "primary home" from codeSystem 2.16.840.1.113883.5.1119 -->
+						<streetAddressLine>{{gurdianHomeStreet}}</streetAddressLine>
+						<city>{{gurdianHomeCity}}</city>
+						<state>{{gurdianHomeState}}</state>
+						<postalCode>{{gurdianHomePostalCode}}</postalCode>
+						<country>{{gurdianHomeCountry}}</country>
+						<!-- US is "United States" from ISO 3166-1 Country Codes: 1.0.3166.1 -->
+					</addr>
+					<telecom value="tel:{{gurdianHomeTelephone}}" use="HP"/>
+					<guardianPerson>
+						<name>
+							<given>{{gurdianGivenName}}</given>
+							<family>{{gurdianFamilyName}}</family>
+						</name>
+					</guardianPerson>
+				</guardian>
+				<birthplace>
+					<place>
+						<addr>
+							<state>{{patientBirthState}}</state>
+							<postalCode>{{patientBirthPostalCode}}</postalCode>
+							<country>{{patientBirthCountry}}</country>
+						</addr>
+					</place>
+				</birthplace>
+				<languageCommunication>
+					<languageCode code="{{languageCode}}"/>
+					<modeCode code="{{languageModeCode}}" displayName="{{languageMode}}" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode"/>
+					<preferenceInd value="true"/>
+				</languageCommunication>
+			</patient>
+			<providerOrganization nullFlavor="NI"/>
+		</patientRole>
+	</recordTarget>
+    <author>
+		<time value="{{ccdaGeneratedTime}}"/>
+		<assignedAuthor>
+			<id extension="yuvoid" root="2.16.840.1.113883.19.5"/>
+			<addr>
+				<streetAddressLine>Yuvo Street.</streetAddressLine>
+				<city>Yuvo City</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom use="WP" value="tel:(555)555-1003"/>
+			<assignedPerson>
+				<name>
+					<given>CCDA</given>
+					<family>Generator</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+    <dataEnterer>
+		<assignedEntity>
+			<id root="2.16.840.1.113883.19.5" extension="43252"/>
+			<addr>
+				<streetAddressLine>Yuvo Street.</streetAddressLine>
+				<city>yuvoid</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom use="WP" value="tel:(555)555-1003"/>
+			<assignedPerson>
+				<name>
+					<given>CCDA</given>
+					<family>Generator</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+    <informant>
+		<assignedEntity>
+			<id extension="yuvoid" root="2.16.840.1.113883.19.5"/>
+			<addr>
+				<streetAddressLine>Yuvo Street.</streetAddressLine>
+				<city>Yuvo City</city>
+				<state>MA</state>
+				<postalCode>02368</postalCode>
+				<country>USA</country>
+			</addr>
+			<telecom value="tel:(555)555-1003"/>
+			<assignedPerson>
+				<name>
+					<given>CCDA</given>
+					<family>Generator</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</informant>
+    <informant>
+		<relatedEntity classCode="PRS">
+			<!-- classCode PRS represents a person with personal relationship with the patient. -->
+			<code code="{{patientInformantRelationCode}}" displayName="{{patientInformantRelation}}" codeSystem="2.16.840.1.113883.1.11.19563" codeSystemName="Personal Relationship Role Type Value Set"/>
+			<relatedPerson>
+				<name>
+					<given>{{patientInformantGivenName}}</given>
+					<family>{{patientInformantFamilyName}}</family>
+				</name>
+			</relatedPerson>
+		</relatedEntity>
+	</informant>
+    <custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id root="2.16.840.1.113883.19.5"/>
+				<name>{{providerName}}</name>
+				<telecom value="tel:{{providerWorkPhone}}" use="WP"/>
+				<addr use="WP">
+					<streetAddressLine>{{providerWorkStreet}}</streetAddressLine>
+					<city>{{providerWorkCity}}</city>
+					<state>{{providerWorkState}}</state>
+					<postalCode>{{providerWorkPostalCode}}</postalCode>
+					<country>{{providerWorkCountry}}</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<componentOf>
+		<encompassingEncounter>
+			<id extension="9937012" root="2.16.840.1.113883.19"/>
+			<code codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT-4" code="99213" displayName="Evaluation and Management"/>
+			<effectiveTime>
+				<low value="20050329"/>
+				<high value="20050329"/>
+			</effectiveTime>
+			<location>
+				<healthCareFacility>
+					<id root="2.16.540.1.113883.19.2"/>
+				</healthCareFacility>
+			</location>
+		</encompassingEncounter>
+	</componentOf>
+</data>
